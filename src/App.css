@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+html {
+	font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Fira Code', 'Segoe UI';
+    background: #083D77;
+	font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*, 
+*::before, 
+*::after  {
+    box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+	max-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    width: 800px;
+    max-width: 90%;
+    margin: auto;
+	margin: 5rem auto ;
+}
+
+.list {
+    background: #EBEBD3;
+    padding: 7rem 5rem ;
+	box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, .1);
+	border-radius: .5rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+}
+
+.list__title {
+	color: var(--primary-color);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2rem;
+	letter-spacing: .3rem;
+	border-bottom: .3rem solid #000;
+	margin-bottom: 3rem;
+	align-self: flex-start;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 30% 1fr;
+	background: #f2f2f2;
+	border-radius: .5rem;
+	overflow: hidden;
+	box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, .2);
+	transition: all .5s ease;
+}
+
+.card:hover  {
+	grid-template-columns: 40% 1fr;
+	cursor: pointer;
+}
+
+
+.card__img {
+	height: 100%;
+	object-fit: cover;
+	vertical-align: top;
+	transition: all ease .3s ;
+}
+
+.card__content {
+	padding: 2rem;
+}
+
+.card__content > * {
+	margin: 1rem;
+}
+
+.card__name {
+	display: flex;
+}
+
+.card__title {
+	font-weight: bold;
+	letter-spacing: .3rem;
+	margin-right: .5rem ;
+}
+
+.change__screen {
+	padding: 1rem 2rem;
+	background: #fff;
+	border: none;
+	border-radius: .5rem;
+	margin-bottom: 2.5rem;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+.change__screen:active {
+	transform: scale(1.5);
+}
+
+.message {
+	background: #94FBAB;
+	padding: 1rem 2rem;
+	border-radius: .5rem;
+	margin-left: 1rem;
 }
